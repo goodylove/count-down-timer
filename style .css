@@ -15,7 +15,7 @@
   width: 100%;
 }
 .overall-container {
-  width: 50%;
+  width: 70%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,7 +32,7 @@ h1 {
 .wrapper {
   width: 100%;
   background-color: #100f0f;
-  border-radius: 9px;
+  border-radius: 4px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -40,7 +40,7 @@ h1 {
   color: white;
   font-size: 2rem;
   max-height: 300px;
-  box-shadow: 1px 1px 1px rgba(20, 24, 242, 0.9);
+  box-shadow: 1px 1px 1px white, -1px -1px 1px 1px white;
 }
 .wrapper div {
   text-align: center;
@@ -50,7 +50,40 @@ p {
   font-size: 2rem;
   padding: 1rem;
   color: white;
+  animation: 5s spin infinite;
+  overflow: hidden;
 }
+@keyframes spin {
+  from {
+    transform: scale(0.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.may {
+  color: gray;
+  font-weight: 800;
+}
+
+@media screen and (max-width: 700px) {
+  .overall-container {
+    width: 100%;
+    padding: 0.5rem;
+  }
+  .wrapper {
+    width: 100%;
+    font-size: 1.4rem;
+  }
+  p,
+  h1 {
+    font-size: 1rem;
+  }
+  .wrapper div {
+    font-size: 1rem;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .overall-container {
     width: 97%;
